@@ -55,30 +55,25 @@ class LinkList:
 
         while current_node:
             if current_node.data == item:
-                return current_node
-            current_node = current_node.next
+                return current_node.data
+            current_node = current_node.next        
+        
         return None
 
 
     def remove(self, item):
+        
         previous_node = self.head
-        current_node = previous_node.next
-
-        while current_node:
-            if current_node.data == item:
-                break
-
+        current_node = self.head.next
+        
+        while current_node.data != item:
             previous_node = current_node
             current_node = current_node.next
-
-        if current_node is None:
-            return None
-
-        if self.head == previous_node:
-            self.head.next = current_node.next
-
-        else:
-            previous_node.next = current_node.next
+        
+        previous_node.next = current_node.next
+            
+        
+            
 
 if __name__ == "__main__":
     ll = LinkList()
@@ -91,11 +86,11 @@ if __name__ == "__main__":
 
     ll.prepend(1)
     print(ll)
-
+ 
     ll.insert(11, 12)
     print(ll)
-
     ll.remove(5)
     print(ll)
-
+    
+    
     print(ll.search(12))

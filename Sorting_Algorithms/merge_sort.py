@@ -20,4 +20,11 @@ if __name__ == "__main__":
  
     expectrd_merged_list = [1, 2]
     merged_list = merge(a, b)
+
+    try:
+        assert expectrd_merged_list == merged_list
+    except AssertionError:
+        print("Output didn't match expected output")
+        print("expected: ", expectrd_merged_list)
+        print("got: ", merged_list)
     
