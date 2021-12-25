@@ -11,7 +11,7 @@ def selection_sort(valu):
         valu[min_index], valu[i] = valu[i], valu[min_index]        
 
 if __name__ == "__main__":
-    l = [1, 11, 9, 4, 2, 5, 7, 3, 6, 8, 10]
+    l = [1, 11, 9, 7, 6, 10, 4, 5, 2, 3,  8]
     print(f"befor selection sort: {l}")
 
     selection_sort(l)
