@@ -10,7 +10,6 @@ def pop():
     else:
         # a = stack.pop()
         return stack.pop()
-    
         
 
 push(1)
