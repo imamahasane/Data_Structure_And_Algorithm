@@ -48,8 +48,3 @@ if __name__ == "__main__":
     print(q.items)
     print(f"head: {q.head}")
     print(f"tail: {q.tail}")
-
-    
-        
-
-    
